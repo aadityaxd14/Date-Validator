@@ -8,4 +8,5 @@
 </ul>
 <h3>Screenshot</h3>
 <img src="https://github.com/aadityaxd14/Date-Validator/blob/main/Screenshot%202025-09-26%20225310.png" alt="running program">
+<img src="https://github.com/aadityaxd14/Date-Validator/blob/main/Screenshot%202025-09-26%20225340.png" alt="running program">
 <img src="" alt="running program">
