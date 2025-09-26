@@ -12,7 +12,7 @@ int main(){
     int dd,mm,yyyy;
     int flag = 0;
     printf("Enter to check the date(dd-mm-yyyy): ");
-    scanf("%d %d %d",&dd,&mm,&yyyy);
+    scanf("%d-%d-%d",&dd,&mm,&yyyy);
 
     flag = leapyear(yyyy); // function call
 
@@ -37,7 +37,7 @@ int main(){
         }
     }
 
-    else if(mm==2 || mm==4 || mm==6 || mm==9 || mm==11){
+    else if(mm==4 || mm==6 || mm==9 || mm==11){
         if(dd>=1 && dd<=30){
             printf("The date is valid\n");
             if(flag==1){
@@ -53,21 +53,29 @@ int main(){
     }
 
     else if(mm==2){
-        if(dd>=1 && dd<=29){
-            printf("The date is valid,");
-            // flag = leapyear(yyyy);
-            if(flag==1){
-                printf("and also a 'Leap year'\n");
+        if(flag==1){
+            if(dd>=1 && dd<=29){
+                printf("The date is valid bcoz %d is a 'Leap year'\n",yyyy);
             }
             else{
-                printf("but not a 'Leap year'\n");
+                printf("Enter a valid date\n");
             }
         }
-        else{
-            printf("Enter a valid date\n");
+        else if(flag==0){
+            if(dd>=1 && dd<=28){
+                printf("The date is valid but not a 'Leap year'\n");
+            }
+            else{
+                if(dd==29){
+                    printf("The date is not valid bcoz %d is not a 'Leap year'\n",yyyy);
+                }
+                else{
+                    printf("Enter a valid date\n",yyyy);
+                }
+                
+            }
         }
     }
-
     else{
         printf("Enter a valid month\n");
     }
